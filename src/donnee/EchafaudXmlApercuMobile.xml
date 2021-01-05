@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<humidite>
+	<mobile>
+		<apercu>
+			<mesureactuelle>64</mesureactuelle>
+			<moyenne>
+				<journee>69</journee>
+				<annee>84</annee>	
+			</moyenne>
+		</apercu>
+	</mobile>
+</humidite>
