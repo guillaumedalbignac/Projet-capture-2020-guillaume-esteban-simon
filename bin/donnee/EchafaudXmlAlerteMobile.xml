@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<humidite>
+	<mobile>
+		<alerte>0</alerte>
+		<seuil>80</seuil>
+	</mobile>
+</humidite>
