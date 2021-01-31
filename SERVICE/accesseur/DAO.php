@@ -59,5 +59,17 @@ class DAO{
 
         return $listeHumidites;
     }
+
+    public static function listerHumiditesApercu(){
+        $MESSAGE_SQL_LISTER_HUMIDITES = "SELECT AVG(tauxhumidite) as moyenne FROM humidite 
+        WHERE date_part('year', moment) = date_part('year', moment)
+        GROUP BY date_part('month',moment) LIMIT 1";
+        $baseDeDonnees = BaseDeDonnees::getConnexion();
+        $requetteListerHumidites = $baseDeDonnees->prepare($MESSAGE_SQL_LISTER_HUMIDITES);
+        $requetteListerHumidites->execute();
+        $listeHumidites = $requetteListerHumidites->fetchAll(PDO::FETCH_OBJ);
+
+        return $listeHumidites;
+    }
 }
 ?>
