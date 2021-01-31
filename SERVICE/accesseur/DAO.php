@@ -3,7 +3,7 @@ require "BaseDeDonnees.php";
 
 class DAO{
     
-    public static function listerHumidites(){
+    public static function listerHumiditesJour(){
         $MESSAGE_SQL_LISTER_HUMIDITES = "SELECT date_part('hour',moment) as heures, MAX(tauxhumidite) as maximum, 
         MIN(tauxhumidite) as minimum, AVG(tauxhumidite) as moyenne FROM humidite WHERE date_part('day', moment) =
         date_part('day', moment) GROUP BY date_part('hour',moment)";
@@ -16,14 +16,14 @@ class DAO{
     }
 
     public static function listerHumiditesMoyennes(){
-        $MESSAGE_SQL_LISTER_PRODUIT_PAR_ID = "SELECT id, titre, description, prix, image FROM produit WHERE id=".$id.";";
+        $MESSAGE_SQL_LISTER_HUMIDITES_MOYENNES = "SELECT MAX(tauxhumidite) as maximum, MIN(tauxhumidite) as minimum, 
+        AVG(tauxhumidite) as moyenne FROM humidite LIMIT 24";
         $baseDeDonnees = BaseDeDonnees::getConnexion();
-        $requetteListerProduitsParId = $baseDeDonnees->prepare($MESSAGE_SQL_LISTER_PRODUIT_PAR_ID);
-        //$requetteListerProduitsParId->bindParam(':id', $id, PDO::PARAM_INT);
-        $requetteListerProduitsParId->execute();
+        $requetteListerHumiditesMoyennes = $baseDeDonnees->prepare($MESSAGE_SQL_LISTER_HUMIDITES_MOYENNES);
+        $requetteListerHumiditesMoyennes->execute();
     
-        $produit = $requetteListerProduitsParId->fetch();
-        return $produit;
+        $listeHumiditesMoyennes = $requetteListerHumiditesMoyennes->fetchAll(PDO::FETCH_OBJ);
+        return $listeHumiditesMoyennes;
     }
 }
 ?>

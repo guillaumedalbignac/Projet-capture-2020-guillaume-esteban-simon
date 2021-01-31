@@ -1,13 +1,14 @@
 <?php 
     require "./accesseur/DAO.php";
-    $listeHumidite = DAO::listerHumidites();
+    $listeHumidite = DAO::listerHumiditesJour();
+    $listeHumiditeMoyennes = DAO::listerHumiditesMoyennes();
 
     header ("Content-Type:text/xml");
     echo '<?xml version="1.0" encoding="UTF-8"?>';
-    /*
-    foreach ($moyennes as $moyenne) 
+    
+    foreach ($listeHumiditeMoyennes as $moyenne) 
     {
-        */
+        
     ?>    
         <humidite>
             <bureau>
@@ -16,8 +17,8 @@
                     <moyenne><?=round($moyenne->moyenne)?></moyenne>  
                     <max><?=$moyenne->maximum?></max> 
 <?php
-    //}
-    //print_r($humidites);
+    }
+    
     foreach ($listeHumidite as $humidite) 
     {
 ?>             
