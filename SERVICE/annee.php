@@ -3,9 +3,9 @@
     ini_set('display_errors', 1);
 
     $usager = 'postgres';
-    $motdepasse = 'motdepasse';
+    $motdepasse = 'password';
     $hote = 'localhost';
-    $base = 'normandiemeteo';
+    $base = 'maintenance';
 
     $dsn = 'pgsql:dbname='.$base.';host=' . $hote;
     $basededonnees = new PDO($dsn, $usager, $motdepasse);
