@@ -27,6 +27,18 @@ class DAO{
         return $listeHumidites;
     }
 
+    public static function listerHumiditesAnnee(){
+        $MESSAGE_SQL_LISTER_HUMIDITES = "SELECT date_part('month',moment) as mois, MAX(tauxhumidite) as maximum, 
+        MIN(tauxhumidite) as minimum, AVG(tauxhumidite) as moyenne FROM humidite WHERE date_part('year', moment) = 
+        date_part('year', moment) GROUP BY date_part('month',moment)";
+        $baseDeDonnees = BaseDeDonnees::getConnexion();
+        $requetteListerHumidites = $baseDeDonnees->prepare($MESSAGE_SQL_LISTER_HUMIDITES);
+        $requetteListerHumidites->execute();
+        $listeHumidites = $requetteListerHumidites->fetchAll(PDO::FETCH_OBJ);
+
+        return $listeHumidites;
+    }
+
     public static function listerHumiditesMoyennes(){
         $MESSAGE_SQL_LISTER_HUMIDITES_MOYENNES = "SELECT MAX(tauxhumidite) as maximum, MIN(tauxhumidite) as minimum, 
         AVG(tauxhumidite) as moyenne FROM humidite LIMIT 24";
