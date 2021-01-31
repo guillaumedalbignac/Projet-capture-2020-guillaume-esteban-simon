@@ -49,5 +49,15 @@ class DAO{
         $listeHumiditesMoyennes = $requetteListerHumiditesMoyennes->fetchAll(PDO::FETCH_OBJ);
         return $listeHumiditesMoyennes;
     }
+
+    public static function listerHumiditesAlerte(){
+        $MESSAGE_SQL_LISTER_HUMIDITES = "SELECT tauxhumidite FROM humidite ORDER BY id ASC LIMIT 1";
+        $baseDeDonnees = BaseDeDonnees::getConnexion();
+        $requetteListerHumidites = $baseDeDonnees->prepare($MESSAGE_SQL_LISTER_HUMIDITES);
+        $requetteListerHumidites->execute();
+        $listeHumidites = $requetteListerHumidites->fetchAll(PDO::FETCH_OBJ);
+
+        return $listeHumidites;
+    }
 }
 ?>
