@@ -2,9 +2,7 @@
 
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -16,22 +14,12 @@
       <AnchorPane id="mesures" layoutY="135.0" prefHeight="743.0" prefWidth="1295.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <Label alignment="CENTER" layoutX="322.0" layoutY="321.0" prefHeight="102.0" prefWidth="656.0" text="Taux d'humidité en Normandie " textAlignment="CENTER" textFill="#fff7f7">
                <font>
-                  <Font name="Juice ITC" size="69.0" />
+                  <Font name="Kunstler Script" size="70.0" />
                </font>
             </Label>
-         <Button id="menu-accueil" fx:id="actionAccueil" depthTest="ENABLE" layoutX="621.0" layoutY="256.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="50.0" textOverrun="CLIP" wrapText="true">
-            <tooltip>
-               <Tooltip text="ACCUEIL">
-                  <graphic>
-                     <Label text="Label" />
-                  </graphic>
-               </Tooltip>
-            </tooltip>
-         </Button>
-         <Label alignment="CENTER" layoutX="612.0" layoutY="238.0" mouseTransparent="true" prefHeight="18.0" prefWidth="75.0" text="Accueil" />
          <BorderPane layoutX="-7.0" prefHeight="102.0" prefWidth="1306.0">
             <left>
-               <ImageView fitHeight="58.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <ImageView id="#menu-journee" fitHeight="58.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                   <image>
                      <Image url="@decoration/menu/jour.png" />
                   </image>
@@ -58,11 +46,30 @@
                </ImageView>
             </right>
          </BorderPane>
-         <ImageView fitHeight="52.0" fitWidth="66.0" layoutX="621.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@decoration/menu/maison.png" />
-            </image>
-         </ImageView>
+         <Label layoutX="145.0" layoutY="102.0" text="Jour">
+            <font>
+               <Font name="Impact" size="16.0" />
+            </font>
+            <padding>
+               <Insets left="10.0" right="10.0" />
+            </padding>
+         </Label>
+         <Label layoutX="622.0" layoutY="102.0" text="Mois">
+            <font>
+               <Font name="Impact" size="16.0" />
+            </font>
+            <padding>
+               <Insets left="10.0" right="10.0" />
+            </padding>
+         </Label>
+         <Label layoutX="1090.0" layoutY="102.0" text="Annee">
+            <font>
+               <Font name="Impact" size="16.0" />
+            </font>
+            <padding>
+               <Insets left="10.0" right="10.0" />
+            </padding>
+         </Label>
             </AnchorPane>
    </children>
    <stylesheets>

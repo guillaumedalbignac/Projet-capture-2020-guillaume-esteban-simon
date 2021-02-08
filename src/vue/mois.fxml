@@ -90,14 +90,7 @@
                   <String fx:value="annee" />
                </styleClass>
             </Pane>
-            <BorderPane layoutY="523.0" prefHeight="110.0" prefWidth="1294.0">
-               <top>
-                  <ImageView fitHeight="52.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                     <image>
-                        <Image url="@decoration/menu/maison.png" />
-                     </image>
-                  </ImageView>
-               </top>
+            <BorderPane layoutY="563.0" prefHeight="70.0" prefWidth="1294.0">
                <center>
                   <ImageView fitHeight="56.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                      <image>
@@ -126,6 +119,21 @@
                   </ImageView>
                </right>
             </BorderPane>
+            <Label layoutX="167.0" layoutY="554.0" text="Jour" textFill="WHITE">
+               <font>
+                  <Font name="Impact" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="633.0" layoutY="554.0" text="Mois" textFill="WHITE">
+               <font>
+                  <Font name="Impact" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="1091.0" layoutY="544.0" text="Annee" textFill="WHITE">
+               <font>
+                  <Font name="Impact" size="16.0" />
+               </font>
+            </Label>
 
             <!--
 
@@ -187,9 +195,9 @@
                   <Image url="@decoration/satistiques.png" />
                </image>
             </ImageView>
-            <Label layoutX="481.0" layoutY="33.0" text="Humidités Mois" textFill="#fff7f7">
+            <Label layoutX="524.0" layoutY="33.0" text="Humidités Mois" textFill="#fff7f7">
                <font>
-                  <Font name="Josefin Sans Thin" size="48.0" />
+                  <Font name="Kunstler Script" size="56.0" />
                </font>
             </Label>
          </children>
