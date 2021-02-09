@@ -70,6 +70,10 @@
                <Insets left="10.0" right="10.0" />
             </padding>
          </Label>
+<<<<<<< Updated upstream
+=======
+         <Button id="#menuJournee" fx:id="menuJournee" layoutX="143.0" layoutY="133.0" mnemonicParsing="false" text="Jour" />
+>>>>>>> Stashed changes
             </AnchorPane>
    </children>
    <stylesheets>

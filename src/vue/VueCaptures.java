@@ -22,8 +22,8 @@ public class VueCaptures extends Vue {
 	public void activerControles()
 	{
 		super.activerControles();
-
-		Button actionJournee = (Button)lookup("#menu-journee");
+		
+		Button actionJournee = (Button)lookup("#menuJournee");
 		
 		actionJournee.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
