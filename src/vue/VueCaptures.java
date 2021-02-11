@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.effect.Bloom;
 import javafx.scene.effect.Glow;
+import javafx.scene.effect.Reflection;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -63,14 +64,24 @@ public class VueCaptures extends Vue {
 		//Ajout d'un titre avec effet de brillance
 		Label labelTitre = (Label)lookup("#label-titre");
 		
+		//Création de la brillance
 		Glow glow = new Glow();
 		glow.setLevel(50);	
+		
+		//Ajout d'un reflet (façon mirroir)
+		Reflection reflection = new Reflection();
+		reflection.setTopOffset(0);
+        reflection.setTopOpacity(0.75);
+        reflection.setBottomOpacity(0.10);
+        
+        labelTitre.setEffect(reflection);
 				
 		EventHandler<MouseEvent> eventHandler = new EventHandler<MouseEvent>() { 
 	         @Override 
 	         public void handle(MouseEvent e) { 
 	            System.out.println("Mise en brillance du titre"); 
 	            labelTitre.setEffect(glow);
+	            
 	         } 
 	      };  
 	    labelTitre.addEventFilter(MouseEvent.MOUSE_CLICKED, eventHandler); 						
