@@ -30,7 +30,7 @@ public class VueJournee extends Vue {
 	public void activerControles()
 	{
 		super.activerControles();
-		Button actionAccueil = (Button)lookup("#menu-accueil");
+		Button actionAccueil = (Button)lookup("#action-menu-accueil"); 
 		
 		actionAccueil.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
@@ -39,7 +39,7 @@ public class VueJournee extends Vue {
 			}
 		});
 
-		Button actionMois = (Button)lookup("#menu-mois");
+		Button actionMois = (Button)lookup("#action-menu-mois");
 		
 		actionMois.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
@@ -48,7 +48,7 @@ public class VueJournee extends Vue {
 			}
 		});
 
-		Button actionAnnee = (Button)lookup("#menu-annee");
+		Button actionAnnee = (Button)lookup("#action-menu-annee");
 		
 		actionAnnee.setOnAction(new EventHandler<ActionEvent>() {
 			@Override

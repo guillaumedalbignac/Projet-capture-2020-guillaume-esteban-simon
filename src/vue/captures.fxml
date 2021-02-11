@@ -2,9 +2,8 @@
 
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
@@ -19,61 +18,23 @@
             </Label>
          <BorderPane layoutX="-7.0" prefHeight="102.0" prefWidth="1306.0">
             <left>
-               <ImageView id="#menu-journee" fitHeight="58.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                  <image>
-                     <Image url="@decoration/menu/jour.png" />
-                  </image>
+               <Button id="action-menu-journee" fx:id="actionMenuJournee" mnemonicParsing="false" text="Jour" BorderPane.alignment="CENTER">
                   <BorderPane.margin>
                      <Insets left="150.0" />
                   </BorderPane.margin>
-               </ImageView>
+               </Button>
             </left>
             <center>
-               <ImageView fitHeight="56.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                  <image>
-                     <Image url="@decoration/menu/mois.png" />
-                  </image>
-               </ImageView>
+               <Button id="action-menu-mois" fx:id="actionMenuMois" mnemonicParsing="false" text="Mois" BorderPane.alignment="CENTER" />
             </center>
             <right>
-               <ImageView fitHeight="84.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                  <image>
-                     <Image url="@decoration/menu/annee.png" />
-                  </image>
+               <Button id="action-menu-annee" fx:id="actionMenuAnnee" mnemonicParsing="false" text="Annee" BorderPane.alignment="CENTER">
                   <BorderPane.margin>
                      <Insets right="150.0" />
                   </BorderPane.margin>
-               </ImageView>
+               </Button>
             </right>
          </BorderPane>
-         <Label layoutX="145.0" layoutY="102.0" text="Jour">
-            <font>
-               <Font name="Impact" size="16.0" />
-            </font>
-            <padding>
-               <Insets left="10.0" right="10.0" />
-            </padding>
-         </Label>
-         <Label layoutX="622.0" layoutY="102.0" text="Mois">
-            <font>
-               <Font name="Impact" size="16.0" />
-            </font>
-            <padding>
-               <Insets left="10.0" right="10.0" />
-            </padding>
-         </Label>
-         <Label layoutX="1090.0" layoutY="102.0" text="Annee">
-            <font>
-               <Font name="Impact" size="16.0" />
-            </font>
-            <padding>
-               <Insets left="10.0" right="10.0" />
-            </padding>
-         </Label>
-<<<<<<< Updated upstream
-=======
-         <Button id="#menuJournee" fx:id="menuJournee" layoutX="143.0" layoutY="133.0" mnemonicParsing="false" text="Jour" />
->>>>>>> Stashed changes
             </AnchorPane>
    </children>
    <stylesheets>

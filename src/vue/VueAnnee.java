@@ -32,7 +32,7 @@ public class VueAnnee extends Vue {
 		super.activerControles();
 		Journal.ecrire(3, "Etape controles1");
 
-		Button actionAccueil = (Button)lookup("#menu-accueil");
+		Button actionAccueil = (Button)lookup("#action-menu-accueil");
 		
 		actionAccueil.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
@@ -41,7 +41,7 @@ public class VueAnnee extends Vue {
 			}
 		});
 
-		Button actionJournee = (Button)lookup("#menu-journee");
+		Button actionJournee = (Button)lookup("#action-menu-journee");
 		
 		actionJournee.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
@@ -50,7 +50,7 @@ public class VueAnnee extends Vue {
 			}
 		});
 
-		Button actionMois = (Button)lookup("#menu-mois");
+		Button actionMois = (Button)lookup("#action-menu-mois");
 		
 		actionMois.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
