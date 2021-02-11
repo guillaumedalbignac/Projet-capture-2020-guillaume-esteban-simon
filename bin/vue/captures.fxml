@@ -11,7 +11,7 @@
 <AnchorPane id="fenetre" prefHeight="743.0" prefWidth="1295.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane id="mesures" layoutY="135.0" prefHeight="743.0" prefWidth="1295.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <Label alignment="CENTER" layoutX="322.0" layoutY="321.0" prefHeight="102.0" prefWidth="656.0" text="Taux d'humidité en Normandie " textAlignment="CENTER" textFill="#fff7f7">
+            <Label id="label-titre" fx:id="labelTitre" alignment="CENTER" layoutX="322.0" layoutY="321.0" prefHeight="102.0" prefWidth="656.0" text="Taux d'humidité en Normandie " textAlignment="CENTER" textFill="#fff7f7">
                <font>
                   <Font name="Kunstler Script" size="70.0" />
                </font>

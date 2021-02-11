@@ -1,5 +1,3 @@
-import donnee.HumiditeDAO;
-import donnee.MobileDAO;
 import vue.Fenetre;
 
 public class App {

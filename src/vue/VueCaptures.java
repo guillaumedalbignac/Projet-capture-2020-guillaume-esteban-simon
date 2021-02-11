@@ -5,6 +5,14 @@ import controleur.ControleurCaptures;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.effect.Bloom;
+import javafx.scene.effect.Glow;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 
 public class VueCaptures extends Vue {
 
@@ -17,6 +25,7 @@ public class VueCaptures extends Vue {
 		super("captures.fxml"); 
 		super.controleur = this.controleur = new ControleurCaptures();
 		Logger.logMsg(Logger.INFO, "new VueCaptures()");
+		
 	}
 		
 	public void activerControles()
@@ -24,6 +33,7 @@ public class VueCaptures extends Vue {
 		super.activerControles();
 		
 		Button actionJournee = (Button)lookup("#action-menu-journee");
+		
 		
 		actionJournee.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
@@ -49,6 +59,20 @@ public class VueCaptures extends Vue {
 			controleur.clicAnnee();
 			}
 		});
-
+		
+		//Ajout d'un titre avec effet de brillance
+		Label labelTitre = (Label)lookup("#label-titre");
+		
+		Glow glow = new Glow();
+		glow.setLevel(50);	
+				
+		EventHandler<MouseEvent> eventHandler = new EventHandler<MouseEvent>() { 
+	         @Override 
+	         public void handle(MouseEvent e) { 
+	            System.out.println("Mise en brillance du titre"); 
+	            labelTitre.setEffect(glow);
+	         } 
+	      };  
+	    labelTitre.addEventFilter(MouseEvent.MOUSE_CLICKED, eventHandler); 						
 	}
 }
